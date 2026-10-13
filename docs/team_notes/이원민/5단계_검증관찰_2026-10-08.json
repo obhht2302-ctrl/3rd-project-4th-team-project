@@ -1,0 +1,199 @@
+{
+  "executed_at": "2026-10-08T23:52:05.267823+09:00",
+  "source_head": "266d20b3f669307d0e19cd23c0e12d61a81fcc38",
+  "source_state": "stage5 working tree not committed",
+  "local_real_ssh_deployments": [
+    {
+      "service": "backend",
+      "exit": 0,
+      "other_container_ids_preserved": 10,
+      "metadata": {
+        "service": "backend",
+        "sha": "266d20b3f669307d0e19cd23c0e12d61a81fcc38",
+        "release": "266d20b3f669307d0e19cd23c0e12d61a81fcc38-501-1",
+        "image": "sha256:f44a6350b3371b270b7f04696d2a79c1c7b9166ec89420e22384f46392026c04",
+        "deployed_at": "2026-10-08T14:48:32Z"
+      }
+    },
+    {
+      "service": "classifier",
+      "exit": 0,
+      "other_container_ids_preserved": 10,
+      "metadata": {
+        "service": "classifier",
+        "sha": "266d20b3f669307d0e19cd23c0e12d61a81fcc38",
+        "release": "266d20b3f669307d0e19cd23c0e12d61a81fcc38-502-1",
+        "image": "sha256:e558309536f496689c65aeb8d7bd17f0ec561797341b7951454e3c4b691a82d5",
+        "deployed_at": "2026-10-08T14:48:49Z"
+      }
+    },
+    {
+      "service": "locator",
+      "exit": 0,
+      "other_container_ids_preserved": 10,
+      "metadata": {
+        "service": "locator",
+        "sha": "266d20b3f669307d0e19cd23c0e12d61a81fcc38",
+        "release": "266d20b3f669307d0e19cd23c0e12d61a81fcc38-503-1",
+        "image": "sha256:539484f54cf481a9479cc414514debf3e122e0686659d371d6612cdea82715f0",
+        "deployed_at": "2026-10-08T14:49:04Z"
+      }
+    },
+    {
+      "service": "verifier",
+      "exit": 0,
+      "other_container_ids_preserved": 10,
+      "metadata": {
+        "service": "verifier",
+        "sha": "266d20b3f669307d0e19cd23c0e12d61a81fcc38",
+        "release": "266d20b3f669307d0e19cd23c0e12d61a81fcc38-504-1",
+        "image": "sha256:ec0dedbfb314d067780f8e26aed579d7b0694a5f940998ba114d794c30f17f80",
+        "deployed_at": "2026-10-08T14:49:18Z"
+      }
+    },
+    {
+      "service": "writer",
+      "exit": 0,
+      "other_container_ids_preserved": 10,
+      "metadata": {
+        "service": "writer",
+        "sha": "266d20b3f669307d0e19cd23c0e12d61a81fcc38",
+        "release": "266d20b3f669307d0e19cd23c0e12d61a81fcc38-505-1",
+        "image": "sha256:a6659c69b2940cf68eb2e7004fc2b0f69bec805f4448b412be9d14ca4ba1906a",
+        "deployed_at": "2026-10-08T14:49:33Z"
+      }
+    },
+    {
+      "service": "mailer",
+      "exit": 0,
+      "other_container_ids_preserved": 10,
+      "metadata": {
+        "service": "mailer",
+        "sha": "266d20b3f669307d0e19cd23c0e12d61a81fcc38",
+        "release": "266d20b3f669307d0e19cd23c0e12d61a81fcc38-506-1",
+        "image": "sha256:80894f4778f5c38e1b0b737f568ec27de77199d686f307b87096f5fd99c3de93",
+        "deployed_at": "2026-10-08T14:50:05Z"
+      }
+    },
+    {
+      "service": "chaos",
+      "exit": 0,
+      "other_container_ids_preserved": 10,
+      "metadata": {
+        "service": "chaos",
+        "sha": "266d20b3f669307d0e19cd23c0e12d61a81fcc38",
+        "release": "266d20b3f669307d0e19cd23c0e12d61a81fcc38-507-1",
+        "image": "sha256:821a2f08ff971e558a796d39c21305ad4e398250ec829c05188fb6562738765f",
+        "deployed_at": "2026-10-08T14:50:21Z"
+      }
+    },
+    {
+      "service": "frontend",
+      "exit": 0,
+      "other_container_ids_preserved": 10,
+      "metadata": {
+        "service": "frontend",
+        "sha": "266d20b3f669307d0e19cd23c0e12d61a81fcc38",
+        "release": "266d20b3f669307d0e19cd23c0e12d61a81fcc38-508-1",
+        "image": "sha256:c5c18c269f8310eb1e8a27e89eff422933fcb1a4ac25de2345f7a9c104783d27",
+        "deployed_at": "2026-10-08T14:52:01Z"
+      }
+    }
+  ],
+  "locator_mounted_seed_files": 2,
+  "frontend_backend_proxy": {
+    "status": "ok",
+    "service": "backend",
+    "mode": "stub"
+  },
+  "server_and_service_env_preserved": true,
+  "mailpit_container_preserved": true,
+  "unverified": [
+    "actual GitHub main runs",
+    "real EC2",
+    "real Discord receipt",
+    "intentional failing main demonstration",
+    "business flow with real LLM"
+  ],
+  "cleanup": {
+    "minwon_states": {
+      "minwon-frontend-1": "exited",
+      "minwon-locator-1": "exited",
+      "minwon-classifier-1": "exited",
+      "minwon-verifier-1": "exited",
+      "minwon-backend-1": "exited",
+      "minwon-mailer-1": "exited",
+      "minwon-writer-1": "exited",
+      "minwon-chaos-1": "exited",
+      "minwon-postgres-1": "exited",
+      "minwon-redis-1": "exited",
+      "minwon-mailpit-1": "exited"
+    },
+    "qa_ssh_container_removed": true,
+    "qa_network_removed": true,
+    "all_service_original_compose_restored": true,
+    "qa_source_volume_removed": true,
+    "other_projects": {
+      "aidevs-pgvector": "running",
+      "aidevs-redis": "running",
+      "aidevs-ollama": "running"
+    },
+    "existing_volumes_deleted": false
+  },
+  "completed_at": "2026-10-08T23:54:25.754001+09:00",
+  "verification": {
+    "application_tests": {
+      "backend": 92,
+      "classifier": 33,
+      "locator": 19,
+      "verifier": 77,
+      "writer": 18,
+      "mailer": 25,
+      "chaos": 132,
+      "frontend": 2,
+      "total": 398
+    },
+    "deployment_shell_cases": 226,
+    "legacy_chaos_entrypoint_cases": 2,
+    "workflow_cases": 256,
+    "shell_platforms": [
+      "Windows Git Bash",
+      "Linux"
+    ],
+    "shellcheck_version": "0.11.0",
+    "shellcheck_exit": 0,
+    "actionlint_version": "1.7.7",
+    "actionlint_exit": 0,
+    "biome_exit": 0,
+    "frontend_build_exit": 0,
+    "compose_eight_images_build_exit": 0,
+    "yaml_version": "2.8.3",
+    "npm_audit_vulnerabilities": 0,
+    "total_cases": 880
+  },
+  "github_preflight": {
+    "environment_names": [
+      "backend",
+      "classifier",
+      "locator",
+      "verifier",
+      "writer",
+      "mailer",
+      "chaos",
+      "frontend"
+    ],
+    "each_environment_secret_names": [
+      "AWS_HOST",
+      "AWS_USER",
+      "AWS_SSH_PRIVATE_KEY",
+      "AWS_SSH_KNOWN_HOSTS"
+    ],
+    "secret_values_read": false
+  },
+  "agreed_paths": {
+    "database": "database/** triggers all eight",
+    "individual_source": "selected service only",
+    "shared_files": "all eight",
+    "docs": "no deployment"
+  }
+}

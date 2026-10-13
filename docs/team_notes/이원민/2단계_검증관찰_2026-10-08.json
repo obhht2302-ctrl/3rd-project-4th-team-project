@@ -1,0 +1,79 @@
+{
+  "docker_http": {
+    "health": 200,
+    "missing_model_key": 503,
+    "invalid_input": 422
+  },
+  "docker_crud": {
+    "put": 200,
+    "get": 200,
+    "delete": 200,
+    "absent": null,
+    "corrupt": 500
+  },
+  "redteam_tcp_real_redis_fake_provider": {
+    "selection": {
+      "target": "classifier",
+      "kind": "llm_invalid",
+      "reason": "synthetic provider QA"
+    },
+    "model_calls": 1,
+    "generated_id_matches_consumer": true,
+    "first": "retry",
+    "failure_code": "LLM_OUTPUT_INVALID",
+    "flag_after_consume": null,
+    "second": "success"
+  },
+  "real_redis_outage": {
+    "during": {
+      "GET": 503,
+      "PUT": 503,
+      "DELETE": 503
+    },
+    "after": 200
+  },
+  "executed_at": "2026-10-08T22:35:47.046463+09:00",
+  "tests": {
+    "chaos_passed": 132,
+    "new_cases": 43,
+    "existing_cases": 89,
+    "warning": "Starlette httpx TestClient deprecation"
+  },
+  "lint": {
+    "ruff_changed_files": "pass",
+    "pyright_errors": 0,
+    "pyright_warnings": 0
+  },
+  "build": {
+    "service": "chaos",
+    "exit_code": 0,
+    "image_id": "sha256:34eb29a88f1fc2ed7d7b14dcfbd1f58d6a8131b1131ca54305a6fdbd7e5d160c"
+  },
+  "source_head": "338af25b3061d5edf0c00982023323a46c62f98c",
+  "source_state": "uncommitted stage2 changes",
+  "unverified": [
+    "real OpenAI",
+    "backend proxy and backend injection",
+    "other target live injection",
+    "EC2",
+    "CI/CD"
+  ],
+  "final_qa_state": [
+    {
+      "service": "chaos",
+      "state": "exited"
+    },
+    {
+      "service": "classifier",
+      "state": "exited"
+    },
+    {
+      "service": "redis",
+      "state": "exited"
+    },
+    {
+      "service": "postgres",
+      "state": "exited"
+    }
+  ]
+}

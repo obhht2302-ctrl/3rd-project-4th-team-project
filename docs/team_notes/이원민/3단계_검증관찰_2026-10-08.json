@@ -1,0 +1,230 @@
+{
+  "executed_at": "2026-10-08T22:54:25.239335+09:00",
+  "live_tests": [
+    {
+      "test": "service_down_and_concurrency",
+      "during_http": 201,
+      "observed_failure": "SERVICE_UNAVAILABLE",
+      "concurrent_exit": 1,
+      "after_status": "success",
+      "script_exit": 0
+    },
+    {
+      "test": "database_disconnect",
+      "during_http": 500,
+      "after_http": 200,
+      "jobs_before": 2,
+      "jobs_after": 2,
+      "script_exit": 0
+    },
+    {
+      "test": "originally_stopped",
+      "exit": 0,
+      "after_state": "exited",
+      "same_container": true
+    },
+    {
+      "test": "real_TERM_restore",
+      "script_exit": 143,
+      "after_health": "healthy"
+    },
+    {
+      "test": "process_crash_restart_policy",
+      "restart_count_before": 0,
+      "restart_count_after": 1,
+      "after_health": "healthy"
+    }
+  ],
+  "compose_config": {
+    "local": {
+      "service_count": 11,
+      "services": [
+        "backend",
+        "chaos",
+        "classifier",
+        "frontend",
+        "locator",
+        "mailer",
+        "mailpit",
+        "postgres",
+        "redis",
+        "verifier",
+        "writer"
+      ],
+      "config_exit": 0
+    },
+    "app_server_static": {
+      "service_count": 9,
+      "services": [
+        "backend",
+        "chaos",
+        "classifier",
+        "frontend",
+        "locator",
+        "mailer",
+        "mailpit",
+        "verifier",
+        "writer"
+      ],
+      "config_exit": 0
+    }
+  },
+  "python_tests": {
+    "backend": 92,
+    "classifier": 33,
+    "locator": 19,
+    "verifier": 77,
+    "writer": 18,
+    "mailer": 25,
+    "chaos": 132
+  },
+  "image_build": {
+    "exit_code": 0,
+    "services": [
+      "backend",
+      "classifier",
+      "locator",
+      "verifier",
+      "writer",
+      "mailer",
+      "chaos",
+      "frontend"
+    ],
+    "image_ids": {
+      "backend": "sha256:99a1d5a1cca424de388c172aead4c8be7eec840b5ff0f0b77f97fde8d1802c5b",
+      "classifier": "sha256:df253ad3d9987c9ea1c8a008e5679c468a8148a85aa51e00efd39c1b6fc53e39",
+      "locator": "sha256:bd787e1cc70db59f22f62fc4dc0b858686a5928ec9dc092c0075d31234225e10",
+      "verifier": "sha256:e0ee98f447bea1c125aa73c188c5cc493d5d16599dc8664ab862f54a8cce9f04",
+      "writer": "sha256:3a3acffd89879881a336dca2f154b55112a8b7feccda20fe6888663f14725d40",
+      "mailer": "sha256:0ad88687ec794b923aead7df2ec72868728291b4479246d518533b929dd1c150",
+      "chaos": "sha256:1b7673ec92fdd99d7bd92902b93999ed03c7a0bbec6591f6ed5ed948f322f80c",
+      "frontend": "sha256:c304659419f440e8380f54d554ca163508c163ae328316292d26237fb5b47c58"
+    }
+  },
+  "restored_health": [
+    {
+      "service": "backend",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "chaos",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "classifier",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "frontend",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "locator",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "mailer",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "mailpit",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "postgres",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "redis",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "verifier",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "writer",
+      "state": "running",
+      "health": "healthy"
+    }
+  ],
+  "finalized_at": "2026-10-08T22:58:39.299099+09:00",
+  "infra_unit_tests": {
+    "passed": 51,
+    "exit_code": 0,
+    "platform": "Windows Git Bash"
+  },
+  "frontend": {
+    "tests_passed": 2,
+    "build_exit": 0
+  },
+  "lint": {
+    "bash_syntax": "pass",
+    "shellcheck_version": "0.11.0",
+    "shellcheck_exit": 0
+  },
+  "final_state": [
+    {
+      "service": "backend",
+      "state": "exited"
+    },
+    {
+      "service": "chaos",
+      "state": "exited"
+    },
+    {
+      "service": "classifier",
+      "state": "exited"
+    },
+    {
+      "service": "frontend",
+      "state": "exited"
+    },
+    {
+      "service": "locator",
+      "state": "exited"
+    },
+    {
+      "service": "mailer",
+      "state": "exited"
+    },
+    {
+      "service": "mailpit",
+      "state": "exited"
+    },
+    {
+      "service": "postgres",
+      "state": "exited"
+    },
+    {
+      "service": "redis",
+      "state": "exited"
+    },
+    {
+      "service": "verifier",
+      "state": "exited"
+    },
+    {
+      "service": "writer",
+      "state": "exited"
+    }
+  ],
+  "unverified": [
+    "EC2 nine-service runtime",
+    "remote DATA_HOST iptables actual traffic",
+    "actual INT on Windows terminal",
+    "same job automatic recovery"
+  ],
+  "source_head": "fd18b3187354f22911bd2b888411ce9af796912c",
+  "source_state": "uncommitted stage3 changes"
+}

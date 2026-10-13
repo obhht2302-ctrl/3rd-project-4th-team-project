@@ -1,0 +1,111 @@
+{
+  "local_ssh_deployment": {
+    "exit": 0,
+    "sha": "8e1688d4694f0102cad7379f39edc935f5f57343",
+    "server_env_preserved": true,
+    "service_env_preserved": true,
+    "other_service_sources_preserved": true,
+    "obsolete_chaos_source_removed": true,
+    "other_container_ids_unchanged": 10,
+    "metadata": {
+      "service": "chaos",
+      "sha": "8e1688d4694f0102cad7379f39edc935f5f57343",
+      "release": "8e1688d4694f0102cad7379f39edc935f5f57343-123-1",
+      "image": "sha256:6f47330430422d47712ab6191bc950dd9873b5de61b67c99d418cadf0845fcd2",
+      "deployed_at": "2026-10-08T14:27:24Z"
+    }
+  },
+  "wrong_known_host": {
+    "exit": 255,
+    "deployment_metadata_unchanged": true
+  },
+  "missing_server_env": {
+    "exit": 1,
+    "deployment_stopped_before_upload": true
+  },
+  "existing_notification_action_mock_webhook": {
+    "posted": 3,
+    "titles": [
+      "✅ [chaos] 테스트·배포 성공",
+      "❌ [chaos] 테스트·배포 실패",
+      "⚪ [chaos] 테스트·배포 취소"
+    ]
+  },
+  "executed_at": "2026-10-08T23:27:35.469613+09:00",
+  "unverified": [
+    "GitHub Actions actual main run",
+    "real EC2",
+    "real Discord receipt",
+    "intentional main failing-test demonstration"
+  ],
+  "real_server_lock": {
+    "sender_exit": 0,
+    "lock_held_seconds": 8,
+    "deployment_elapsed_seconds": 17.48,
+    "metadata": {
+      "service": "chaos",
+      "sha": "8e1688d4694f0102cad7379f39edc935f5f57343",
+      "release": "8e1688d4694f0102cad7379f39edc935f5f57343-124-1",
+      "image": "sha256:ea3dcfe86886569341d0a740da383b2b0422231c189df0f5893fb3736ed828b2",
+      "deployed_at": "2026-10-08T14:30:36Z"
+    }
+  },
+  "dockerignore": {
+    "staging_directory_excluded": true,
+    "nested_env_excluded": true
+  },
+  "verification": {
+    "chaos_pytest_passed": 132,
+    "deployment_shell_tests_passed": 27,
+    "workflow_expression_tests_passed": 29,
+    "ruff_owned_python_files": 11,
+    "ruff_exit": 0,
+    "shellcheck_exit": 0,
+    "actionlint_version": "1.7.7",
+    "actionlint_exit": 0,
+    "biome_exit": 0,
+    "linux_shell_tests_passed": 27,
+    "ci_compose_build_exit": 0,
+    "local_node_version": "24.18.0"
+  },
+  "github_preflight": {
+    "repo": "twlaude/3rd-project-4th-team-project",
+    "viewer_permission": "WRITE",
+    "environment": "chaos",
+    "environment_secret_names": [
+      "AWS_HOST",
+      "AWS_USER",
+      "AWS_SSH_PRIVATE_KEY",
+      "AWS_SSH_KNOWN_HOSTS"
+    ],
+    "repository_notification_secret": "DISCORD_WEBHOOK_URL",
+    "secret_values_read": false
+  },
+  "source_head": "8e1688d4694f0102cad7379f39edc935f5f57343",
+  "source_state": "stage4 implementation not committed",
+  "cleanup": {
+    "minwon_states": {
+      "minwon-chaos-1": "exited",
+      "minwon-frontend-1": "exited",
+      "minwon-backend-1": "exited",
+      "minwon-locator-1": "exited",
+      "minwon-verifier-1": "exited",
+      "minwon-mailer-1": "exited",
+      "minwon-classifier-1": "exited",
+      "minwon-writer-1": "exited",
+      "minwon-postgres-1": "exited",
+      "minwon-redis-1": "exited",
+      "minwon-mailpit-1": "exited"
+    },
+    "qa_ssh_container_removed": true,
+    "qa_network_removed": true,
+    "chaos_original_compose_restored": true,
+    "other_projects": {
+      "aidevs-pgvector": "running",
+      "aidevs-redis": "running",
+      "aidevs-ollama": "running"
+    },
+    "volumes_deleted": false
+  },
+  "completed_at": "2026-10-08T23:40:02.387866+09:00"
+}

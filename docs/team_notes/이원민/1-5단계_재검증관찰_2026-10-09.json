@@ -1,0 +1,1109 @@
+{
+  "verified_at_kst": "2026-10-09 00:21:52 KST",
+  "local_head": "d2201596acd3d84f48fdc0bbabcb143d384b3b09",
+  "working_tree": "CI lint fix and checklist not committed; user document moves preserved",
+  "tests": {
+    "python": 396,
+    "frontend": 2,
+    "infra_windows": 51,
+    "deployment": 226,
+    "workflow": 256,
+    "lint_entrypoint": 3,
+    "total": 934,
+    "linux_chaos_repeated": 132,
+    "linux_entrypoint_repeated": 3
+  },
+  "lint": {
+    "owned_chaos_ci_files": 11,
+    "owned_chaos_exit": 0,
+    "shellcheck_version": "0.11.0",
+    "shellcheck_exit": 0,
+    "actionlint_version": "1.7.7",
+    "actionlint_exit": 0,
+    "js_biome_exit": 0,
+    "full_python_summary": [
+      {
+        "service": "backend",
+        "exit": 1,
+        "findings": 15,
+        "codes": {
+          "I001": 12,
+          "C408": 2,
+          "F401": 1
+        }
+      },
+      {
+        "service": "classifier",
+        "exit": 1,
+        "findings": 9,
+        "codes": {
+          "I001": 8,
+          "F401": 1
+        }
+      },
+      {
+        "service": "locator",
+        "exit": 1,
+        "findings": 9,
+        "codes": {
+          "I001": 8,
+          "F401": 1
+        }
+      },
+      {
+        "service": "verifier",
+        "exit": 1,
+        "findings": 13,
+        "codes": {
+          "I001": 12,
+          "F401": 1
+        }
+      },
+      {
+        "service": "writer",
+        "exit": 1,
+        "findings": 9,
+        "codes": {
+          "I001": 8,
+          "F401": 1
+        }
+      },
+      {
+        "service": "mailer",
+        "exit": 1,
+        "findings": 17,
+        "codes": {
+          "I001": 13,
+          "BLE001": 1,
+          "F401": 1,
+          "RUF012": 2
+        }
+      },
+      {
+        "service": "chaos",
+        "exit": 1,
+        "findings": 5,
+        "codes": {
+          "I001": 4,
+          "F401": 1
+        }
+      }
+    ],
+    "full_python_findings": [
+      {
+        "service": "backend",
+        "code": "I001",
+        "file": "src/backend/app/clients/agents.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "backend",
+        "code": "C408",
+        "file": "src/backend/app/clients/agents.py",
+        "line": 21,
+        "column": 16
+      },
+      {
+        "service": "backend",
+        "code": "C408",
+        "file": "src/backend/app/clients/agents.py",
+        "line": 26,
+        "column": 16
+      },
+      {
+        "service": "backend",
+        "code": "I001",
+        "file": "src/backend/app/clients/chaos.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "backend",
+        "code": "I001",
+        "file": "src/backend/app/clients/store.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "backend",
+        "code": "I001",
+        "file": "src/backend/app/core/config.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "backend",
+        "code": "I001",
+        "file": "src/backend/app/main.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "backend",
+        "code": "I001",
+        "file": "src/backend/app/routers/api.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "backend",
+        "code": "I001",
+        "file": "src/backend/app/schemas/contract.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "backend",
+        "code": "F401",
+        "file": "src/backend/app/schemas/contract.py",
+        "line": 2,
+        "column": 21
+      },
+      {
+        "service": "backend",
+        "code": "I001",
+        "file": "src/backend/app/services/dispatch.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "backend",
+        "code": "I001",
+        "file": "src/backend/app/services/supervisor.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "backend",
+        "code": "I001",
+        "file": "src/backend/tests/test_contract.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "backend",
+        "code": "I001",
+        "file": "src/backend/tests/test_supervisor.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "backend",
+        "code": "I001",
+        "file": "src/backend/tests/test_supervisor.py",
+        "line": 49,
+        "column": 5
+      },
+      {
+        "service": "classifier",
+        "code": "I001",
+        "file": "src/classifier/app/clients/chaos.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "classifier",
+        "code": "I001",
+        "file": "src/classifier/app/core/config.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "classifier",
+        "code": "I001",
+        "file": "src/classifier/app/main.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "classifier",
+        "code": "I001",
+        "file": "src/classifier/app/routers/api.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "classifier",
+        "code": "I001",
+        "file": "src/classifier/app/schemas/contract.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "classifier",
+        "code": "F401",
+        "file": "src/classifier/app/schemas/contract.py",
+        "line": 2,
+        "column": 21
+      },
+      {
+        "service": "classifier",
+        "code": "I001",
+        "file": "src/classifier/app/services/stub.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "classifier",
+        "code": "I001",
+        "file": "src/classifier/tests/test_contract.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "classifier",
+        "code": "I001",
+        "file": "src/classifier/tests/test_run.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "locator",
+        "code": "I001",
+        "file": "src/locator/app/clients/chaos.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "locator",
+        "code": "I001",
+        "file": "src/locator/app/core/config.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "locator",
+        "code": "I001",
+        "file": "src/locator/app/main.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "locator",
+        "code": "I001",
+        "file": "src/locator/app/routers/api.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "locator",
+        "code": "I001",
+        "file": "src/locator/app/schemas/contract.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "locator",
+        "code": "F401",
+        "file": "src/locator/app/schemas/contract.py",
+        "line": 2,
+        "column": 21
+      },
+      {
+        "service": "locator",
+        "code": "I001",
+        "file": "src/locator/app/services/stub.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "locator",
+        "code": "I001",
+        "file": "src/locator/tests/test_contract.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "locator",
+        "code": "I001",
+        "file": "src/locator/tests/test_run.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "verifier",
+        "code": "I001",
+        "file": "src/verifier/app/clients/chaos.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "verifier",
+        "code": "I001",
+        "file": "src/verifier/app/core/config.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "verifier",
+        "code": "I001",
+        "file": "src/verifier/app/main.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "verifier",
+        "code": "I001",
+        "file": "src/verifier/app/routers/api.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "verifier",
+        "code": "I001",
+        "file": "src/verifier/app/schemas/contract.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "verifier",
+        "code": "F401",
+        "file": "src/verifier/app/schemas/contract.py",
+        "line": 2,
+        "column": 21
+      },
+      {
+        "service": "verifier",
+        "code": "I001",
+        "file": "src/verifier/app/services/channel.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "verifier",
+        "code": "I001",
+        "file": "src/verifier/app/services/draft.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "verifier",
+        "code": "I001",
+        "file": "src/verifier/app/services/verifier.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "verifier",
+        "code": "I001",
+        "file": "src/verifier/tests/conftest.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "verifier",
+        "code": "I001",
+        "file": "src/verifier/tests/test_checks.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "verifier",
+        "code": "I001",
+        "file": "src/verifier/tests/test_contract.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "verifier",
+        "code": "I001",
+        "file": "src/verifier/tests/test_run.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "writer",
+        "code": "I001",
+        "file": "src/writer/app/clients/chaos.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "writer",
+        "code": "I001",
+        "file": "src/writer/app/core/config.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "writer",
+        "code": "I001",
+        "file": "src/writer/app/main.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "writer",
+        "code": "I001",
+        "file": "src/writer/app/routers/api.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "writer",
+        "code": "I001",
+        "file": "src/writer/app/schemas/contract.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "writer",
+        "code": "F401",
+        "file": "src/writer/app/schemas/contract.py",
+        "line": 2,
+        "column": 21
+      },
+      {
+        "service": "writer",
+        "code": "I001",
+        "file": "src/writer/app/services/stub.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "writer",
+        "code": "I001",
+        "file": "src/writer/tests/test_contract.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "writer",
+        "code": "I001",
+        "file": "src/writer/tests/test_run.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "mailer",
+        "code": "I001",
+        "file": "src/mailer/app/clients/chaos.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "mailer",
+        "code": "I001",
+        "file": "src/mailer/app/clients/smtp.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "mailer",
+        "code": "I001",
+        "file": "src/mailer/app/core/config.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "mailer",
+        "code": "I001",
+        "file": "src/mailer/app/main.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "mailer",
+        "code": "BLE001",
+        "file": "src/mailer/app/main.py",
+        "line": 14,
+        "column": 16
+      },
+      {
+        "service": "mailer",
+        "code": "I001",
+        "file": "src/mailer/app/routers/api.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "mailer",
+        "code": "I001",
+        "file": "src/mailer/app/schemas/contract.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "mailer",
+        "code": "F401",
+        "file": "src/mailer/app/schemas/contract.py",
+        "line": 2,
+        "column": 21
+      },
+      {
+        "service": "mailer",
+        "code": "I001",
+        "file": "src/mailer/app/services/contacts.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "mailer",
+        "code": "I001",
+        "file": "src/mailer/app/services/mailer.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "mailer",
+        "code": "I001",
+        "file": "src/mailer/app/services/outbox.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "mailer",
+        "code": "I001",
+        "file": "src/mailer/tests/conftest.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "mailer",
+        "code": "RUF012",
+        "file": "src/mailer/tests/conftest.py",
+        "line": 17,
+        "column": 14
+      },
+      {
+        "service": "mailer",
+        "code": "RUF012",
+        "file": "src/mailer/tests/conftest.py",
+        "line": 18,
+        "column": 12
+      },
+      {
+        "service": "mailer",
+        "code": "I001",
+        "file": "src/mailer/tests/test_contract.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "mailer",
+        "code": "I001",
+        "file": "src/mailer/tests/test_run.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "mailer",
+        "code": "I001",
+        "file": "src/mailer/tests/test_run.py",
+        "line": 167,
+        "column": 5
+      },
+      {
+        "service": "chaos",
+        "code": "I001",
+        "file": "src/chaos/app/clients/chaos.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "chaos",
+        "code": "I001",
+        "file": "src/chaos/app/schemas/contract.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "chaos",
+        "code": "F401",
+        "file": "src/chaos/app/schemas/contract.py",
+        "line": 2,
+        "column": 21
+      },
+      {
+        "service": "chaos",
+        "code": "I001",
+        "file": "src/chaos/tests/test_chaos.py",
+        "line": 1,
+        "column": 1
+      },
+      {
+        "service": "chaos",
+        "code": "I001",
+        "file": "src/chaos/tests/test_contract.py",
+        "line": 1,
+        "column": 1
+      }
+    ],
+    "frontend_existing_warning": 1
+  },
+  "build": {
+    "compose_images": 8,
+    "exit": 0,
+    "frontend_typecheck_and_build_exit": 0
+  },
+  "npm_audit_vulnerabilities": 0,
+  "stage1_document_checks": {
+    "faults": 10,
+    "inputs": 20,
+    "input_limits": [
+      501,
+      500
+    ],
+    "base64_valid": true
+  },
+  "stage2_live": {
+    "docker_http": {
+      "health": 200,
+      "missing_model_key": 503,
+      "invalid_input": 422
+    },
+    "docker_crud": {
+      "put": 200,
+      "get": 200,
+      "delete": 200,
+      "absent": null,
+      "corrupt": 500
+    },
+    "redteam_tcp_real_redis_fake_provider": {
+      "selection": {
+        "target": "classifier",
+        "kind": "llm_invalid",
+        "reason": "synthetic provider QA"
+      },
+      "model_calls": 1,
+      "generated_id_matches_consumer": true,
+      "first": "retry",
+      "failure_code": "LLM_OUTPUT_INVALID",
+      "flag_after_consume": null,
+      "second": "success"
+    }
+  },
+  "stage3_live": {
+    "executed_at": "2026-10-09T00:15:39.685050+09:00",
+    "live_tests": [
+      {
+        "test": "service_down_and_concurrency",
+        "during_http": 201,
+        "observed_failure": "SERVICE_UNAVAILABLE",
+        "concurrent_exit": 1,
+        "after_status": "success",
+        "script_exit": 0
+      },
+      {
+        "test": "database_disconnect",
+        "during_http": 500,
+        "after_http": 200,
+        "jobs_before": 3,
+        "jobs_after": 3,
+        "script_exit": 0
+      },
+      {
+        "test": "originally_stopped",
+        "exit": 0,
+        "after_state": "exited",
+        "same_container": true
+      },
+      {
+        "test": "real_TERM_restore",
+        "script_exit": 143,
+        "after_health": "healthy"
+      },
+      {
+        "test": "process_crash_restart_policy",
+        "restart_count_before": 0,
+        "restart_count_after": 1,
+        "after_health": "healthy"
+      }
+    ]
+  },
+  "backend_proxy": {
+    "proxy_get_absent_flag": 200,
+    "proxy_invalid_redteam_input": 422,
+    "paid_model_calls": 0
+  },
+  "github_main_runs": [
+    {
+      "conclusion": "failure",
+      "databaseId": 37797935415,
+      "headSha": "5e0df6baf0056009ae7335f7a0008988e6620531",
+      "status": "completed",
+      "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935415",
+      "workflowName": "chaos",
+      "jobs": [
+        {
+          "name": "test",
+          "conclusion": "failure",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935415/job/113382166287",
+          "steps": []
+        },
+        {
+          "name": "notify",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935415/job/113382406004",
+          "steps": [
+            {
+              "name": "Run ./.github/actions/discord-notify",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "deploy",
+          "conclusion": "skipped",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935415/job/113382407580",
+          "steps": []
+        }
+      ],
+      "observed_messages": [
+        "디스코드 알림 전송: ❌ [chaos] 테스트·배포 실패"
+      ]
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37797935573,
+      "headSha": "5e0df6baf0056009ae7335f7a0008988e6620531",
+      "status": "completed",
+      "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935573",
+      "workflowName": "locator",
+      "jobs": [
+        {
+          "name": "test",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935573/job/113382166210",
+          "steps": []
+        },
+        {
+          "name": "deploy",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935573/job/113382505241",
+          "steps": [
+            {
+              "name": "Deploy this checkout to EC2",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "notify",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935573/job/113382929745",
+          "steps": [
+            {
+              "name": "Run ./.github/actions/discord-notify",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ],
+      "observed_messages": [
+        "deploy: locator ready sha=5e0df6baf0056009ae7335f7a0008988e6620531",
+        "디스코드 알림 전송: ✅ [locator] 테스트·배포 성공"
+      ]
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37797935432,
+      "headSha": "5e0df6baf0056009ae7335f7a0008988e6620531",
+      "status": "completed",
+      "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935432",
+      "workflowName": "verifier",
+      "jobs": [
+        {
+          "name": "test",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935432/job/113382166176",
+          "steps": []
+        },
+        {
+          "name": "deploy",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935432/job/113382551795",
+          "steps": [
+            {
+              "name": "Deploy this checkout to EC2",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "notify",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935432/job/113382877074",
+          "steps": [
+            {
+              "name": "Run ./.github/actions/discord-notify",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ],
+      "observed_messages": [
+        "deploy: verifier ready sha=5e0df6baf0056009ae7335f7a0008988e6620531",
+        "디스코드 알림 전송: ✅ [verifier] 테스트·배포 성공"
+      ]
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37797935171,
+      "headSha": "5e0df6baf0056009ae7335f7a0008988e6620531",
+      "status": "completed",
+      "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935171",
+      "workflowName": "mailer",
+      "jobs": [
+        {
+          "name": "test",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935171/job/113382165114",
+          "steps": []
+        },
+        {
+          "name": "deploy",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935171/job/113382539163",
+          "steps": [
+            {
+              "name": "Deploy this checkout to EC2",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "notify",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935171/job/113383083225",
+          "steps": [
+            {
+              "name": "Run ./.github/actions/discord-notify",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ],
+      "observed_messages": [
+        "deploy: mailer ready sha=5e0df6baf0056009ae7335f7a0008988e6620531",
+        "디스코드 알림 전송: ✅ [mailer] 테스트·배포 성공"
+      ]
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37797935200,
+      "headSha": "5e0df6baf0056009ae7335f7a0008988e6620531",
+      "status": "completed",
+      "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935200",
+      "workflowName": "classifier",
+      "jobs": [
+        {
+          "name": "test",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935200/job/113382165789",
+          "steps": []
+        },
+        {
+          "name": "deploy",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935200/job/113382551166",
+          "steps": [
+            {
+              "name": "Deploy this checkout to EC2",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "notify",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935200/job/113383189235",
+          "steps": [
+            {
+              "name": "Run ./.github/actions/discord-notify",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ],
+      "observed_messages": [
+        "deploy: classifier ready sha=5e0df6baf0056009ae7335f7a0008988e6620531",
+        "디스코드 알림 전송: ✅ [classifier] 테스트·배포 성공"
+      ]
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37797935320,
+      "headSha": "5e0df6baf0056009ae7335f7a0008988e6620531",
+      "status": "completed",
+      "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935320",
+      "workflowName": "backend",
+      "jobs": [
+        {
+          "name": "test",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935320/job/113382188617",
+          "steps": []
+        },
+        {
+          "name": "deploy",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935320/job/113382577498",
+          "steps": [
+            {
+              "name": "Deploy this checkout to EC2",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "notify",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935320/job/113383251016",
+          "steps": [
+            {
+              "name": "Run ./.github/actions/discord-notify",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ],
+      "observed_messages": [
+        "deploy: backend ready sha=5e0df6baf0056009ae7335f7a0008988e6620531",
+        "디스코드 알림 전송: ✅ [backend] 테스트·배포 성공"
+      ]
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37797935174,
+      "headSha": "5e0df6baf0056009ae7335f7a0008988e6620531",
+      "status": "completed",
+      "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935174",
+      "workflowName": "writer",
+      "jobs": [
+        {
+          "name": "test",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935174/job/113382164612",
+          "steps": []
+        },
+        {
+          "name": "deploy",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935174/job/113382575075",
+          "steps": [
+            {
+              "name": "Deploy this checkout to EC2",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "notify",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935174/job/113383137431",
+          "steps": [
+            {
+              "name": "Run ./.github/actions/discord-notify",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ],
+      "observed_messages": [
+        "deploy: writer ready sha=5e0df6baf0056009ae7335f7a0008988e6620531",
+        "디스코드 알림 전송: ✅ [writer] 테스트·배포 성공"
+      ]
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37797935482,
+      "headSha": "5e0df6baf0056009ae7335f7a0008988e6620531",
+      "status": "completed",
+      "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935482",
+      "workflowName": "frontend",
+      "jobs": [
+        {
+          "name": "test",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935482/job/113382165329",
+          "steps": []
+        },
+        {
+          "name": "deploy",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935482/job/113382785403",
+          "steps": [
+            {
+              "name": "Deploy this checkout to EC2",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "notify",
+          "conclusion": "success",
+          "status": "completed",
+          "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37797935482/job/113383434164",
+          "steps": [
+            {
+              "name": "Run ./.github/actions/discord-notify",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ],
+      "observed_messages": [
+        "deploy: frontend ready sha=5e0df6baf0056009ae7335f7a0008988e6620531",
+        "디스코드 알림 전송: ✅ [frontend] 테스트·배포 성공"
+      ]
+    }
+  ],
+  "cleanup": {
+    "minwon_states": {
+      "backend": "exited",
+      "classifier": "exited",
+      "locator": "exited",
+      "verifier": "exited",
+      "writer": "exited",
+      "mailer": "exited",
+      "chaos": "exited",
+      "frontend": "exited",
+      "postgres": "exited",
+      "redis": "exited",
+      "mailpit": "exited"
+    },
+    "other_projects": {
+      "aidevs-pgvector": "running",
+      "aidevs-redis": "running",
+      "aidevs-ollama": "running"
+    },
+    "existing_volumes_deleted": false
+  },
+  "remaining": [
+    "publish chaos CI lint fix and verify successful main deploy",
+    "planned intentional main assertion-failure demonstration and remote unchanged state",
+    "EC2 DATA_HOST interruption and restoration",
+    "actual model and all-team business/attack/mail recovery integration",
+    "77 existing Python lint findings and frontend warning",
+    "visual confirmation in Discord channel and real external frontend"
+  ],
+  "documentation": {
+    "broken_relative_links": 0,
+    "utf8_valid": true
+  }
+}

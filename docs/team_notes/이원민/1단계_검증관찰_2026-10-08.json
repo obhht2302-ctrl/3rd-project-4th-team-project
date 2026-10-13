@@ -1,0 +1,158 @@
+{
+  "observations": [
+    {
+      "test": "real_redis_flag_once",
+      "first_status": "retry",
+      "first_failure": "LLM_OUTPUT_INVALID",
+      "next_status": "success",
+      "cleared": true
+    },
+    {
+      "test": "actual_classifier_stop_start",
+      "outage_observed": true,
+      "backend_http": 201,
+      "failure": "SERVICE_UNAVAILABLE",
+      "job_id": "job-7b1777e18fc54cb7b6ef0a68594e2360",
+      "script_exit": 0,
+      "classifier_after": "success",
+      "same_job_after": "retry"
+    },
+    {
+      "test": "actual_postgres_stop_start",
+      "port_outage_observed": true,
+      "script_exit": 0,
+      "backend_http": 500,
+      "backend_after_http": 200,
+      "job_count_before": 1,
+      "job_count_after": 1
+    },
+    {
+      "test": "actual_redis_stop_start",
+      "port_outage_observed": true,
+      "script_exit": 0,
+      "classifier_status": "success",
+      "redis_after": "PONG"
+    },
+    {
+      "test": "actual_mailpit_stop_start",
+      "outage_observed": true,
+      "during_status": "retry",
+      "during_failure": "MAIL_SEND_FAILED",
+      "during_delivery": "queued",
+      "initial_attempts": 3,
+      "script_exit": 0,
+      "background_delivery_after": "sent",
+      "mailpit_message_count": 2,
+      "repeat_call_count": 2,
+      "receipt_present": true
+    }
+  ],
+  "restored_containers": [
+    {
+      "Name": "minwon-backend-1",
+      "Service": "backend",
+      "State": "running",
+      "Health": "healthy"
+    },
+    {
+      "Name": "minwon-chaos-1",
+      "Service": "chaos",
+      "State": "running",
+      "Health": "healthy"
+    },
+    {
+      "Name": "minwon-classifier-1",
+      "Service": "classifier",
+      "State": "running",
+      "Health": "healthy"
+    },
+    {
+      "Name": "minwon-frontend-1",
+      "Service": "frontend",
+      "State": "running",
+      "Health": "healthy"
+    },
+    {
+      "Name": "minwon-locator-1",
+      "Service": "locator",
+      "State": "running",
+      "Health": "healthy"
+    },
+    {
+      "Name": "minwon-mailer-1",
+      "Service": "mailer",
+      "State": "running",
+      "Health": "healthy"
+    },
+    {
+      "Name": "minwon-mailpit-1",
+      "Service": "mailpit",
+      "State": "running",
+      "Health": "healthy"
+    },
+    {
+      "Name": "minwon-postgres-1",
+      "Service": "postgres",
+      "State": "running",
+      "Health": "healthy"
+    },
+    {
+      "Name": "minwon-redis-1",
+      "Service": "redis",
+      "State": "running",
+      "Health": "healthy"
+    },
+    {
+      "Name": "minwon-verifier-1",
+      "Service": "verifier",
+      "State": "running",
+      "Health": "healthy"
+    },
+    {
+      "Name": "minwon-writer-1",
+      "Service": "writer",
+      "State": "running",
+      "Health": "healthy"
+    }
+  ],
+  "unit_tests": {
+    "backend": 92,
+    "classifier": 33,
+    "locator": 19,
+    "verifier": 77,
+    "writer": 18,
+    "mailer": 25,
+    "chaos": 89,
+    "frontend": 2
+  },
+  "python": "3.12.7",
+  "frontend_node_local": "24.18.0",
+  "frontend_node_image": "22-alpine",
+  "python_lint": {
+    "tool": "Ruff 0.16.10",
+    "errors": 80,
+    "rules": {
+      "I001": 68,
+      "C408": 2,
+      "F401": 7,
+      "BLE001": 1,
+      "RUF012": 2
+    }
+  },
+  "frontend_lint": {
+    "errors": 0,
+    "warnings": 1,
+    "warning": "non-null assertion in src/main.tsx"
+  },
+  "built_images": [
+    "[minwon-backend:latest] sha256:0d3cce069cd976112cbfb760d60887d8411914df91438ae5e9b987f0a97271a9",
+    "[minwon-classifier:latest] sha256:2494f5925264370afad6da104646238673531699b57aae46cc71e484cf9e33d4",
+    "[minwon-locator:latest] sha256:1ef9502f03c431f2983d117f02163d6fef33da63e12fbe22d1ee7dbde10c1ff9",
+    "[minwon-verifier:latest] sha256:b7a84b0727d3b435c9278d6f526f22c426d300a073e736f3363c2cc8e1c5ab78",
+    "[minwon-writer:latest] sha256:d79590057b699344bb12cc4cbc9ed10af3d0cac57f4f2ee595b7567e59401e48",
+    "[minwon-mailer:latest] sha256:5cbc7be02900dae63d8c4d5b81420ae320b99e37c70e70e91203bd681c19d2b1",
+    "[minwon-chaos:latest] sha256:da7927b68e08d7a2a944389f6bbc34caaffb1d952d88d1ddb75f8cea22f0bd69",
+    "[minwon-frontend:latest] sha256:8c297402ac29294c3aa737afce33818121a7d2f8b344a6c7407f58aea174989a"
+  ],
+  "final_state": "QA minwon containers stopped; images and PostgreSQL volume preserved"
+}

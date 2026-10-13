@@ -1,0 +1,711 @@
+{
+  "verified_at_utc": "2026-10-08T23:43:51.423Z",
+  "verified_at_kst": "2026-10-09 08:43:51 KST",
+  "scope": "chaos main deployment verification, intentional unit-test failure gate and recovery",
+  "baseline": {
+    "headSha": "db457332f34f093097d3918a66014d4468d3d7ac",
+    "conclusion": "success",
+    "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37859908907",
+    "jobs": [
+      {
+        "name": "test",
+        "conclusion": "success",
+        "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37859908907/job/113592893858"
+      },
+      {
+        "name": "deploy",
+        "conclusion": "success",
+        "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37859908907/job/113593077975"
+      },
+      {
+        "name": "notify",
+        "conclusion": "success",
+        "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37859908907/job/113593280369"
+      }
+    ]
+  },
+  "failure": {
+    "sha": "534b4e4b2f8b612ca6aa6b1eec5bfea3d5b60bba",
+    "status": "completed",
+    "conclusion": "failure",
+    "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37860625419",
+    "jobs": [
+      {
+        "name": "test",
+        "conclusion": "failure",
+        "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37860625419/job/113595218180",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run pip install -r requirements.txt",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run set -o pipefail; python -m pytest -q 2>&1 | sed 's/^/[TEST] /'",
+            "conclusion": "failure"
+          },
+          {
+            "name": "Lint chaos owned Python files",
+            "conclusion": "skipped"
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "conclusion": "skipped"
+          },
+          {
+            "name": "Test workflow gates and notification results",
+            "conclusion": "skipped"
+          },
+          {
+            "name": "Check deployment scripts",
+            "conclusion": "skipped"
+          },
+          {
+            "name": "Check workflow",
+            "conclusion": "skipped"
+          },
+          {
+            "name": "Build chaos image",
+            "conclusion": "skipped"
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "conclusion": "skipped"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "name": "notify",
+        "conclusion": "success",
+        "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37860625419/job/113595312572",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run ./.github/actions/discord-notify",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "name": "deploy",
+        "conclusion": "skipped",
+        "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37860625419/job/113595313492",
+        "steps": []
+      }
+    ]
+  },
+  "recovery": {
+    "sha": "8c7e449f15c6f2ea235753d70c9b4591c4b8f656",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37860744905",
+    "jobs": [
+      {
+        "name": "test",
+        "conclusion": "success",
+        "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37860744905/job/113595599598",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run pip install -r requirements.txt",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run set -o pipefail; python -m pytest -q 2>&1 | sed 's/^/[TEST] /'",
+            "conclusion": "success"
+          },
+          {
+            "name": "Lint chaos owned Python files",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Test workflow gates and notification results",
+            "conclusion": "success"
+          },
+          {
+            "name": "Check deployment scripts",
+            "conclusion": "success"
+          },
+          {
+            "name": "Check workflow",
+            "conclusion": "success"
+          },
+          {
+            "name": "Build chaos image",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "name": "deploy",
+        "conclusion": "success",
+        "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37860744905/job/113595800575",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Deploy this checkout to EC2",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "name": "notify",
+        "conclusion": "success",
+        "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37860744905/job/113595917977",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run ./.github/actions/discord-notify",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
+  },
+  "snapshots": {
+    "baseline": {
+      "workflow": {
+        "sha": "0372f5ed44c398e8f26ba0f2e83c7603fb4a2ad0",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37860553551",
+        "jobs": [
+          {
+            "name": "snapshot",
+            "conclusion": "success",
+            "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37860553551/job/113594985358",
+            "steps": [
+              {
+                "name": "Set up job",
+                "conclusion": "success"
+              },
+              {
+                "name": "Read deployment and container state without changing server",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "conclusion": "success"
+              },
+              {
+                "name": "Complete job",
+                "conclusion": "success"
+              }
+            ]
+          }
+        ]
+      },
+      "state": {
+        "deployment": {
+          "service": "chaos",
+          "sha": "db457332f34f093097d3918a66014d4468d3d7ac",
+          "release": "db457332f34f093097d3918a66014d4468d3d7ac-37859908907-1",
+          "image": "sha256:7063dc329da4e7c40831d93a9f8568ebd4985394bca82867b3010e0c9f183ef6",
+          "deployed_at": "2026-10-08T23:32:42Z"
+        },
+        "containers": [
+          {
+            "type": "container",
+            "service": "backend",
+            "id": "9e8f105b385faa9b19de8d40574a002f198167134e9b0a22b61f47e121491b83",
+            "image": "sha256:b5686d46c010b91b02bb1a7c8635ce483415a33dd8d10dea27d81bd1b115c262",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:51.975398969Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "classifier",
+            "id": "b7118f3b78712beff35bdc6ebcb9958b6f18f961c64f673f072f6cb64205045c",
+            "image": "sha256:ca8a42631753d72482645e9ad83ad0980628a455c88cd63c9c68e24e13c705d4",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:29.747150442Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "locator",
+            "id": "52c356b5166df59bf74dd9c12f768186c1ccd1cd4a1f3a86d64603c99c005324",
+            "image": "sha256:8e16dbe3055c1d89af9c4db9999ede2a80a5f0fbe2b05cf9e789dfa67b3152ab",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:59.392600726Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "verifier",
+            "id": "487e58e0e8ab3b3cf379becc57fca23c3090a6027ac6337ef6e9b0969e6837c8",
+            "image": "sha256:2948b3d0ae6992f439eeb84ba0f513f22841d3f20bc49cecb992bf4246ae2fac",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:44.428770088Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "writer",
+            "id": "280fcb6ed7085bd302122bd03f7e567fd50193238c20845a18b0078a734a2262",
+            "image": "sha256:0cc2ca1e206f7f24ace96a7b1d81b2034a89ecd2898674597232ee74563a0a21",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:22.138362997Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "mailer",
+            "id": "e1cb5737bf7eae126fcabd904fec68dcfe615307636b59e0ed521f26f96b65a9",
+            "image": "sha256:cfa15fa8373a675816bdf95dd1efda025e08a3fc93205d9fcd9819b743cf6794",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:14.671973096Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "chaos",
+            "id": "93e3825f6a27e8632d689c1aeeab2fe17285c90cb63e5ad56ad5f1dc827ce328",
+            "image": "sha256:7063dc329da4e7c40831d93a9f8568ebd4985394bca82867b3010e0c9f183ef6",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:36.984776131Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "frontend",
+            "id": "870250a4e10f6528b9b4a91f1184b1e1c1b960fbe28ea1cb0408b48a2d725f9e",
+            "image": "sha256:79b5950bbbd04c8da7e1d2c380e0620a3014367c14920034f664f69fe073d0cc",
+            "status": "running",
+            "started_at": "2026-10-08T23:33:06.75106519Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "mailpit",
+            "status": "missing"
+          }
+        ],
+        "health": {
+          "type": "health",
+          "status": "ok",
+          "service": "chaos"
+        }
+      }
+    },
+    "blocked": {
+      "workflow": {
+        "sha": "534b4e4b2f8b612ca6aa6b1eec5bfea3d5b60bba",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37860698861",
+        "jobs": [
+          {
+            "name": "snapshot",
+            "conclusion": "success",
+            "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37860698861/job/113595457113",
+            "steps": [
+              {
+                "name": "Set up job",
+                "conclusion": "success"
+              },
+              {
+                "name": "Read deployment and container state without changing server",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "conclusion": "success"
+              },
+              {
+                "name": "Complete job",
+                "conclusion": "success"
+              }
+            ]
+          }
+        ]
+      },
+      "state": {
+        "deployment": {
+          "service": "chaos",
+          "sha": "db457332f34f093097d3918a66014d4468d3d7ac",
+          "release": "db457332f34f093097d3918a66014d4468d3d7ac-37859908907-1",
+          "image": "sha256:7063dc329da4e7c40831d93a9f8568ebd4985394bca82867b3010e0c9f183ef6",
+          "deployed_at": "2026-10-08T23:32:42Z"
+        },
+        "containers": [
+          {
+            "type": "container",
+            "service": "backend",
+            "id": "9e8f105b385faa9b19de8d40574a002f198167134e9b0a22b61f47e121491b83",
+            "image": "sha256:b5686d46c010b91b02bb1a7c8635ce483415a33dd8d10dea27d81bd1b115c262",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:51.975398969Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "classifier",
+            "id": "b7118f3b78712beff35bdc6ebcb9958b6f18f961c64f673f072f6cb64205045c",
+            "image": "sha256:ca8a42631753d72482645e9ad83ad0980628a455c88cd63c9c68e24e13c705d4",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:29.747150442Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "locator",
+            "id": "52c356b5166df59bf74dd9c12f768186c1ccd1cd4a1f3a86d64603c99c005324",
+            "image": "sha256:8e16dbe3055c1d89af9c4db9999ede2a80a5f0fbe2b05cf9e789dfa67b3152ab",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:59.392600726Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "verifier",
+            "id": "487e58e0e8ab3b3cf379becc57fca23c3090a6027ac6337ef6e9b0969e6837c8",
+            "image": "sha256:2948b3d0ae6992f439eeb84ba0f513f22841d3f20bc49cecb992bf4246ae2fac",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:44.428770088Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "writer",
+            "id": "280fcb6ed7085bd302122bd03f7e567fd50193238c20845a18b0078a734a2262",
+            "image": "sha256:0cc2ca1e206f7f24ace96a7b1d81b2034a89ecd2898674597232ee74563a0a21",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:22.138362997Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "mailer",
+            "id": "e1cb5737bf7eae126fcabd904fec68dcfe615307636b59e0ed521f26f96b65a9",
+            "image": "sha256:cfa15fa8373a675816bdf95dd1efda025e08a3fc93205d9fcd9819b743cf6794",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:14.671973096Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "chaos",
+            "id": "93e3825f6a27e8632d689c1aeeab2fe17285c90cb63e5ad56ad5f1dc827ce328",
+            "image": "sha256:7063dc329da4e7c40831d93a9f8568ebd4985394bca82867b3010e0c9f183ef6",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:36.984776131Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "frontend",
+            "id": "870250a4e10f6528b9b4a91f1184b1e1c1b960fbe28ea1cb0408b48a2d725f9e",
+            "image": "sha256:79b5950bbbd04c8da7e1d2c380e0620a3014367c14920034f664f69fe073d0cc",
+            "status": "running",
+            "started_at": "2026-10-08T23:33:06.75106519Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "mailpit",
+            "status": "missing"
+          }
+        ],
+        "health": {
+          "type": "health",
+          "status": "ok",
+          "service": "chaos"
+        }
+      }
+    },
+    "recovered": {
+      "workflow": {
+        "sha": "8c7e449f15c6f2ea235753d70c9b4591c4b8f656",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37860886951",
+        "jobs": [
+          {
+            "name": "snapshot",
+            "conclusion": "success",
+            "url": "https://github.com/twlaude/3rd-project-4th-team-project/actions/runs/37860886951/job/113596060008",
+            "steps": [
+              {
+                "name": "Set up job",
+                "conclusion": "success"
+              },
+              {
+                "name": "Read deployment and container state without changing server",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "conclusion": "success"
+              },
+              {
+                "name": "Complete job",
+                "conclusion": "success"
+              }
+            ]
+          }
+        ]
+      },
+      "state": {
+        "deployment": {
+          "service": "chaos",
+          "sha": "8c7e449f15c6f2ea235753d70c9b4591c4b8f656",
+          "release": "8c7e449f15c6f2ea235753d70c9b4591c4b8f656-37860744905-1",
+          "image": "sha256:d862d2d4fab59a1377a0fd047a508c55c1c308a8552be4fc9da622521f6bb258",
+          "deployed_at": "2026-10-08T23:41:40Z"
+        },
+        "containers": [
+          {
+            "type": "container",
+            "service": "backend",
+            "id": "9e8f105b385faa9b19de8d40574a002f198167134e9b0a22b61f47e121491b83",
+            "image": "sha256:b5686d46c010b91b02bb1a7c8635ce483415a33dd8d10dea27d81bd1b115c262",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:51.975398969Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "classifier",
+            "id": "b7118f3b78712beff35bdc6ebcb9958b6f18f961c64f673f072f6cb64205045c",
+            "image": "sha256:ca8a42631753d72482645e9ad83ad0980628a455c88cd63c9c68e24e13c705d4",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:29.747150442Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "locator",
+            "id": "52c356b5166df59bf74dd9c12f768186c1ccd1cd4a1f3a86d64603c99c005324",
+            "image": "sha256:8e16dbe3055c1d89af9c4db9999ede2a80a5f0fbe2b05cf9e789dfa67b3152ab",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:59.392600726Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "verifier",
+            "id": "487e58e0e8ab3b3cf379becc57fca23c3090a6027ac6337ef6e9b0969e6837c8",
+            "image": "sha256:2948b3d0ae6992f439eeb84ba0f513f22841d3f20bc49cecb992bf4246ae2fac",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:44.428770088Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "writer",
+            "id": "280fcb6ed7085bd302122bd03f7e567fd50193238c20845a18b0078a734a2262",
+            "image": "sha256:0cc2ca1e206f7f24ace96a7b1d81b2034a89ecd2898674597232ee74563a0a21",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:22.138362997Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "mailer",
+            "id": "e1cb5737bf7eae126fcabd904fec68dcfe615307636b59e0ed521f26f96b65a9",
+            "image": "sha256:cfa15fa8373a675816bdf95dd1efda025e08a3fc93205d9fcd9819b743cf6794",
+            "status": "running",
+            "started_at": "2026-10-08T23:32:14.671973096Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "chaos",
+            "id": "f0ec2fc97b11b0206815f206ef46e2ddefd91404b7f949a01afd4946245ed501",
+            "image": "sha256:d862d2d4fab59a1377a0fd047a508c55c1c308a8552be4fc9da622521f6bb258",
+            "status": "running",
+            "started_at": "2026-10-08T23:41:34.171410383Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "frontend",
+            "id": "870250a4e10f6528b9b4a91f1184b1e1c1b960fbe28ea1cb0408b48a2d725f9e",
+            "image": "sha256:79b5950bbbd04c8da7e1d2c380e0620a3014367c14920034f664f69fe073d0cc",
+            "status": "running",
+            "started_at": "2026-10-08T23:33:06.75106519Z",
+            "restart_count": 0,
+            "health": "healthy"
+          },
+          {
+            "type": "container",
+            "service": "mailpit",
+            "status": "missing"
+          }
+        ],
+        "health": {
+          "type": "health",
+          "status": "ok",
+          "service": "chaos"
+        }
+      }
+    }
+  },
+  "comparison": {
+    "blocked": {
+      "deployment_record_unchanged": true,
+      "all_eight_container_ids_images_start_times_restart_counts_unchanged": true,
+      "chaos_health_ok": true,
+      "mailpit_still_missing": true
+    },
+    "recovered": {
+      "recovery_sha_matches": true,
+      "chaos_healthy": true,
+      "other_seven_services_unchanged": true,
+      "mailpit_still_missing": true
+    }
+  },
+  "local_tests": {
+    "restored_chaos_pytest": 132,
+    "workflow_regressions": 256,
+    "lint_entrypoint": 3,
+    "total_passed": 391,
+    "intentional_failure": {
+      "failed": 1,
+      "passed": 132
+    }
+  },
+  "local_lint": {
+    "chaos_owned_scope": "passed",
+    "actionlint_version": "1.7.7",
+    "actionlint_workflows": "passed"
+  },
+  "messages": {
+    "baseline": "deploy\tDeploy this checkout to EC2\t2026-10-08T23:32:42.8307002Z deploy: chaos ready sha=db457332f34f093097d3918a66014d4468d3d7ac\nnotify\tRun ./.github/actions/discord-notify\t2026-10-08T23:32:48.8923158Z 디스코드 알림 전송: ✅ [chaos] 테스트·배포 성공\n",
+    "failure": "test\tRun set -o pipefail; python -m pytest -q 2>&1 | sed 's/^/[TEST] /'\t2026-10-08T23:39:38.0061466Z [TEST] E       Failed: INTENTIONAL_DEPLOYMENT_GATE_DEMO_20261009\ntest\tRun set -o pipefail; python -m pytest -q 2>&1 | sed 's/^/[TEST] /'\t2026-10-08T23:39:38.0074009Z [TEST] 1 failed, 132 passed, 1 warning in 0.54s\nnotify\tRun ./.github/actions/discord-notify\t2026-10-08T23:39:46.3402796Z 디스코드 알림 전송: ❌ [chaos] 테스트·배포 실패\n",
+    "recovery": "test\tRun set -o pipefail; python -m pytest -q 2>&1 | sed 's/^/[TEST] /'\t2026-10-08T23:40:53.9458443Z [TEST] 132 passed, 1 warning in 0.54s\ndeploy\tDeploy this checkout to EC2\t2026-10-08T23:41:40.0740639Z deploy: chaos ready sha=8c7e449f15c6f2ea235753d70c9b4591c4b8f656\nnotify\tRun ./.github/actions/discord-notify\t2026-10-08T23:41:47.0240377Z 디스코드 알림 전송: ✅ [chaos] 테스트·배포 성공\n"
+  },
+  "cleanup": {
+    "temporary_failure_test_reverted": true,
+    "temporary_audit_workflow_removed": true,
+    "application_and_original_workflows_unchanged_from_baseline": true
+  },
+  "limitations": [
+    "Discord HTTP send confirmed; channel visual confirmation not performed",
+    "EC2 minwon Mailpit absent at all three observations",
+    "No real model, Redis/DB readiness or network interruption verification in this scope",
+    "Local Docker daemon unresponsive; image builds confirmed in actual Linux CI and EC2",
+    "Early temporary audit failed on missing Mailpit and transient YAML newline error; corrected before controlled test failure",
+    "Early prepare commit KST label actually used UTC; ISO GitHub times and verified_at_kst are authoritative"
+  ]
+}
